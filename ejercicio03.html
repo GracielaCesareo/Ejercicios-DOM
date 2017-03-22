@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+		body{
+			text-align: center;
+			font-family: sans-serif;
+			color: #ffffff;
+			padding-top: 40px;
+		  padding-bottom: 40px;
+		  background-color: #657e9a;
+		}
+	</style>
+	<h1>Formulario</h1>
+	<p>Completa el siguiente formulario</p>
+	<form  id="frm1">
+		Nombre: <input type="text" name="name" id="name"><br>
+		Mail: <input type="text" name="email" id="email"><br>
+		Teléfono: <input type="text" name="telefono" id="tel"><br>
+		Dirección: <input type="text" name="direccion" id="dir"><br>
+		Clave: <input type="password" name="clave" id="clave"><br>
+	</form >
+	<button onclick="mostrarDatos()">Mostrar</button>
+
+	<p id="mostrarNombre"></p>
+	<p id="mostrarMail"></p>
+	<p id="mostrarTelefono"></p>
+	<p id="mostrarDireccion"></p>
+	<p id="mostrarClave"></p>
+
+	<script>
+		function mostrarDatos() {
+			var nombre = document.getElementById('name').value;
+			var email  = document.getElementById('email').value;
+			var telefono  = document.getElementById('tel').value;
+			var direccion  = document.getElementById('dir').value;
+			var clave  = document.getElementById('clave').value;
+
+			mostrarNombre.innerHTML = nombre;
+			mostrarMail.innerHTML = email;
+			mostrarTelefono.innerHTML = telefono;
+			mostrarDireccion.innerHTML = direccion;
+			mostrarClave.innerHTML = clave;
+
+		}
+	</script>
+</body>
+</html>
